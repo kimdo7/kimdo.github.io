@@ -294,6 +294,7 @@ section:last-child {
     .mainDetails {
         padding: 15px 15px;
     }
+    
 
     section {
         padding: 15px 0 0;
@@ -301,6 +302,10 @@ section:last-child {
 
     #mainArea {
         padding: 0 25px;
+    }
+
+    .navbar {
+        width: cal(50% + 50px)
     }
 
 
@@ -451,3 +456,36 @@ section:last-child {
     -moz-animation-delay: 0, 2.5s;
     animation-delay: 0, 2.5s;
 }
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 800px;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: #f1f1f1;
+    color: black;
+  }
+  
+  .navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* .main {
+    padding: 16px;
+    margin-bottom: 30px;
+  } */

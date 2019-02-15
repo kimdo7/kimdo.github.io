@@ -10,39 +10,61 @@
 
     <link type="text/css" rel="stylesheet" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
-    <!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var width = $("#mainArea").width() + parseInt($("#mainArea").css("padding-left")) * 2
+            $(".navbar").width(width)
+
+            $(window).resize(function () {
+                var width = $("#mainArea").width() + parseInt($("#mainArea").css("padding-left")) * 2
+                $(".navbar").width(width)
+            });
+        });
+    </script>
 </head>
 
 <body id="top">
+
+
     <div id="cv" class="instaFade">
+        <div class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#professional_summary">Summary</a>
+            <a href="#skills">Skills</a>
+            <a href="#project">Project</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+        </div>
+
         <div class="mainDetails">
             <div id="headshot" class="quickFade">
                 <img src="https://media.licdn.com/dms/image/C5603AQGbd4WfzxR-5Q/profile-displayphoto-shrink_200_200/0?e=1550707200&v=beta&t=6baX91taszPhlXJ-_wnFF-b9sNJFg_cCQUkO7PuFXpY"
                     alt="Kim Do" />
             </div>
+            <div id="home">
+                <div id="name">
+                    <h1 class="quickFade delayTwo">Kim Do</h1>
+                    <h3 class="quickFade delayThree">Software Engineer<br>Full Stack Developer</h3>
+                </div>
 
-            <div id="name">
-                <h1 class="quickFade delayTwo">Kim Do</h1>
-                <h3 class="quickFade delayThree">Software Engineer<br>Full Stack Developer</h3>
+                <div id="contactDetails" class="quickFade delayFour">
+                    <ul>
+                        <li>Email: <a href="mailto:dohoangkimpy@gmail.com" target="_blank">dohoangkimpy@gmail.com</a>
+                        </li>
+                        <li>Website: <a href="http://www.kimdo7.com">www.kimdo7.com</a></li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/kimdo7/">kimdo7</a></li>
+                        <li>Github: <a href="https://github.com/kimdo7">kimdo7</a></li>
+                        <li>Phone: <a href="tel:1-669-237-9706">+1 (669) 237 - 9706</a></li>
+                        <li>City: San Jose, CA</li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
             </div>
-
-            <div id="contactDetails" class="quickFade delayFour">
-                <ul>
-                    <li>Email: <a href="mailto:dohoangkimpy@gmail.com" target="_blank">dohoangkimpy@gmail.com</a></li>
-                    <li>Website: <a href="http://www.kimdo7.com">www.kimdo7.com</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/kimdo7/">kimdo7</a></li>
-                    <li>Github: <a href="https://github.com/kimdo7">kimdo7</a></li>
-                    <li>Phone: <a href="tel:1-669-237-9706">+1 (669) 237 - 9706</a></li>
-                    <li>City: San Jose, CA</li>
-                </ul>
-            </div>
-            <div class="clear"></div>
         </div>
 
         <div id="mainArea" class="quickFade delayFive">
-            <section>
+            <section id="professional_summary">
                 <article>
                     <div class="sectionTitle">
                         <h1>Professional Summary</h1>
@@ -61,7 +83,7 @@
                 <div class="clear"></div>
             </section>
 
-            <section>
+            <section id="skills">
                 <div class="sectionTitle">
                     <h1>Key Skills</h1>
                 </div>
@@ -89,9 +111,9 @@
             </section><!-- Key Skills -->
 
 
-            <section>
+            <section id="project">
                 <div class="sectionTitle">
-                    <h1>PROJECTS</h1>
+                    <h1>PROJECT</h1>
                 </div>
 
                 <div class="sectionContent">
@@ -126,7 +148,7 @@
                 <div class="clear"></div>
             </section>
 
-            <section>
+            <section id="experience">
                 <div class="sectionTitle">
                     <h1> Experience</h1>
                 </div>
@@ -165,7 +187,7 @@
                 <div class="clear"></div>
             </section>
 
-            <section>
+            <section id="education">
                 <div class="sectionTitle">
                     <h1>Professional Development</h1>
                 </div>
